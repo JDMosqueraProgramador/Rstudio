@@ -18,6 +18,7 @@ output: html_document
 # install.packages("MVN")
 # install.packages("mvShapiroTest")
 # install.packages("fdth")
+# install.packages("summarytools")
 
 
 ```
@@ -35,17 +36,38 @@ library(corrplot)
 library(MVN)
 library(mvShapiroTest)
 library(fdth) # Tablas de freceuencias, historigramas
-
+library(summarytools)
+library(dplyr)
 
 rm(list=ls(all=TRUE))
 
 ```
 
 ```{r}
+# Cargado de datos
+
+data <- datasets::rock
+
+data
 
 
-datasets::rock
+```
 
+
+```{r}
+
+
+# Analisis inicial
+mean(data$area)
+
+dfSummary(data)
+
+```
+
+```{r}
+
+data2 <- data %>% 
+  rename(perimetro = peri, permiso = perm)
 
 ```
 
