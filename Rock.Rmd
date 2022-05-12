@@ -1,0 +1,51 @@
+---
+title: "Descriptive stadistics"
+author: "JD"
+date: "12 de mayo de 2022"
+output: html_document
+---
+
+```{r}
+
+# Solo se debe instalar una vez 
+
+# install.packages("datasets") 
+# install.packages("moments")
+# install.packages("modeest") 
+# install.packages("ggplot2") 
+# install.packages("vcd")
+# install.packages("corrplot")
+# install.packages("MVN")
+# install.packages("mvShapiroTest")
+# install.packages("fdth")
+
+
+```
+
+```{r}
+
+# Importamos las librerias 
+
+library(datasets)
+library(moments) # curtuosis skewnees--
+library(modeest)
+library(ggplot2)
+library(vcd)
+library(corrplot)
+library(MVN)
+library(mvShapiroTest)
+library(fdth) # Tablas de freceuencias, historigramas
+
+
+rm(list=ls(all=TRUE))
+
+```
+
+```{r}
+
+
+datasets::rock
+
+
+```
+
