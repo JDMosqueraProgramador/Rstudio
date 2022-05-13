@@ -65,9 +65,18 @@ dfSummary(data)
 ```
 
 ```{r}
+# ctrl + shift + m para pipes (%>%)
 
 data2 <- data %>% 
-  rename(perimetro = peri, permiso = perm)
+  rename(perimetro = peri, permiso = perm) %>% 
+    mutate(city = "Medellín") %>% 
+    dplyr::select(-c(area)) %>% 
+    mutate(city = dplyr::recode(city, "Medellín" = "Bogotá"))
+  
+
+```
+
+```{r}
 
 ```
 
